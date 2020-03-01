@@ -31,8 +31,8 @@
         a = t.n(r),
         c = t(12),
         i = t.n(c),
-        o = (t(55), t(2)),
-        l = t(3),
+        o = (t(55), t(1)),
+        l = t(2),
         u = t(9),
         s = function(e) {
           return Object(u.b)(
@@ -103,9 +103,9 @@
           })
         ),
         h = t(38),
-        p = t.n(h),
-        v = t(40),
-        b = t.n(v);
+        v = t.n(h),
+        p = t(40),
+        b = t.n(p);
       function g() {
         var e = Object(o.a)([
           "\n  cursor: pointer;\n  justify-content: center;\n  align-items: center;\n  display: flex;\n"
@@ -136,7 +136,7 @@
             E,
             null,
             "DARK_THEME" === n.name
-              ? a.a.createElement(p.a, {
+              ? a.a.createElement(v.a, {
                   onClick: c,
                   fontSize: "40px",
                   color: n.colors.background.text
@@ -167,7 +167,7 @@
             return a.a.createElement(e, n, n.children);
           });
         },
-        w = {
+        j = {
           name: "ARABIC",
           dir: "RIGHT_TO_LEFT",
           sign: "\u0639",
@@ -178,7 +178,7 @@
             kids: "\u0623\u0637\u0641\u0627\u0644"
           }
         },
-        j = {
+        w = {
           name: "ENGLISH",
           dir: "LEFT_TO_RIGHT",
           sign: "E",
@@ -202,7 +202,7 @@
           e
         );
       }
-      var A = l.b.div(
+      var O = l.b.div(
           T(),
           function(e) {
             return e.theme.colors.primary.normal;
@@ -211,14 +211,14 @@
             return e.theme.colors.primary.text;
           }
         ),
-        O = y(
+        A = y(
           s(function(e) {
             var n = e.i18n,
               t = e.setEnglish,
               r = e.setArabic,
               c = e.theme;
             return a.a.createElement(
-              A,
+              O,
               {
                 theme: c,
                 onClick: function() {
@@ -232,7 +232,7 @@
                   }
                 }
               },
-              "ENGLISH" === n.name ? w.sign : j.sign
+              "ENGLISH" === n.name ? j.sign : w.sign
             );
           })
         );
@@ -308,7 +308,7 @@
                 L,
                 { i18n: t },
                 a.a.createElement(x, null),
-                a.a.createElement(O, null)
+                a.a.createElement(A, null)
               )
             );
           })
@@ -339,9 +339,7 @@
         );
       }
       function B() {
-        var e = Object(o.a)([
-          "\n  video {\n    height: 600px !important;\n    filter: blur(40px);\n    opacity: 0.4;\n  }\n"
-        ]);
+        var e = Object(o.a)(["\n  video {\n    object-fit: cover;\n  }\n"]);
         return (
           (B = function() {
             return e;
@@ -351,7 +349,7 @@
       }
       function D() {
         var e = Object(o.a)([
-          "\n        float: right;\n        direction: rtl;\n      "
+          "\n  video {\n    height: 600px !important;\n    filter: blur(40px);\n    opacity: 0.4;\n  }\n"
         ]);
         return (
           (D = function() {
@@ -361,7 +359,9 @@
         );
       }
       function F() {
-        var e = Object(o.a)(["\n        float: right;\n      "]);
+        var e = Object(o.a)([
+          "\n        float: right;\n        direction: rtl;\n      "
+        ]);
         return (
           (F = function() {
             return e;
@@ -370,11 +370,7 @@
         );
       }
       function N() {
-        var e = Object(o.a)([
-          "\n  background: linear-gradient(to top, #000, #0000);\n  position: absolute;\n  bottom: 0;\n  left: 10%;\n  right: 10%;\n  z-index: 4;\n\n  padding: 20px;\n\n  h1 {\n    ",
-          "\n    color: white;\n  }\n  p {\n    ",
-          "\n    color: white;\n  }\n"
-        ]);
+        var e = Object(o.a)(["\n        float: right;\n      "]);
         return (
           (N = function() {
             return e;
@@ -382,36 +378,50 @@
           e
         );
       }
-      var K = l.b.div(
-          N(),
+      function K() {
+        var e = Object(o.a)([
+          "\n  background: linear-gradient(to top, #000, #0000);\n  position: absolute;\n  bottom: 0;\n  left: 10%;\n  right: 10%;\n  z-index: 4;\n\n  padding: 20px;\n\n  h1 {\n    ",
+          "\n    color: white;\n  }\n  p {\n    ",
+          "\n    color: white;\n  }\n"
+        ]);
+        return (
+          (K = function() {
+            return e;
+          }),
+          e
+        );
+      }
+      var J = l.b.div(
+          K(),
           function(e) {
-            return "RIGHT_TO_LEFT" === e.i18n.dir && Object(l.a)(F());
+            return "RIGHT_TO_LEFT" === e.i18n.dir && Object(l.a)(N());
           },
           function(e) {
-            return "RIGHT_TO_LEFT" === e.i18n.dir && Object(l.a)(D());
+            return "RIGHT_TO_LEFT" === e.i18n.dir && Object(l.a)(F());
           }
         ),
-        J = Object(l.b)(V.a)(B()),
-        W = l.b.div(S()),
-        P = l.b.div(C()),
-        $ = y(function(e) {
+        W = Object(l.b)(V.a)(D()),
+        P = Object(l.b)(V.a)(B()),
+        $ = l.b.div(S()),
+        q = l.b.div(C()),
+        Q = y(function(e) {
           var n = e.next,
             t = e.item,
             r = e.i18n;
           return a.a.createElement(
-            P,
+            q,
             null,
             a.a.createElement(
-              W,
+              $,
               null,
-              a.a.createElement(J, {
+              a.a.createElement(W, {
                 url: t.video,
                 muted: !0,
                 playing: !0,
                 width: "100%"
               })
             ),
-            a.a.createElement(V.a, {
+            a.a.createElement(P, {
               url: t.video,
               muted: !0,
               playing: !0,
@@ -421,7 +431,7 @@
               style: { zIndex: 3 }
             }),
             a.a.createElement(
-              K,
+              J,
               { i18n: r },
               a.a.createElement(
                 "h1",
@@ -436,39 +446,39 @@
             )
           );
         });
-      function q() {
+      function U() {
         var e = Object(o.a)([
           "\n  width: 200px;\n  height: 150px;\n  margin-bottom: 20px;\n"
         ]);
         return (
-          (q = function() {
+          (U = function() {
             return e;
           }),
           e
         );
       }
-      function Q() {
+      function X() {
         var e = Object(o.a)([
           "\n  flex: 1;\n\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  flex-direction: column;\n  padding-top: 20px;\n"
         ]);
         return (
-          (Q = function() {
+          (X = function() {
             return e;
           }),
           e
         );
       }
-      var U = l.b.div(Q()),
-        X = l.b.div(q()),
-        Y = function(e) {
+      var Y = l.b.div(X()),
+        Z = l.b.div(U()),
+        ee = function(e) {
           var n = e.list,
             t = e.active;
           return a.a.createElement(
-            U,
+            Y,
             null,
             n.map(function(e, n) {
               return a.a.createElement(
-                X,
+                Z,
                 null,
                 a.a.createElement("img", {
                   src: e.thumb,
@@ -485,22 +495,22 @@
             })
           );
         },
-        Z = t(41),
-        ee = t.n(Z),
-        ne = t(42),
+        ne = t(41),
         te = t.n(ne),
-        re = t(43),
+        re = t(42),
         ae = t.n(re),
-        ce = t(44),
+        ce = t(43),
         ie = t.n(ce),
-        oe = t(45),
+        oe = t(44),
         le = t.n(oe),
-        ue = t(46),
+        ue = t(45),
         se = t.n(ue),
-        me = [
+        me = t(46),
+        fe = t.n(me),
+        de = [
           {
-            thumb: ee.a,
-            video: te.a,
+            thumb: te.a,
+            video: ae.a,
             ar: {
               title: "\u0645\u0633\u062a\u0631 \u0628\u064a\u0646",
               desc:
@@ -513,8 +523,8 @@
             }
           },
           {
-            thumb: ae.a,
-            video: ie.a,
+            thumb: ie.a,
+            video: le.a,
             ar: {
               title:
                 "\u0645\u0627 \u0647\u064a \u0642\u062f\u0631\u0627\u062a \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0635\u0646\u0627\u0639\u064a\u061f | \u0648\u062b\u0627\u0626\u0642\u064a\u0629 \u062f\u064a \u062f\u0628\u0644\u064a\u0648",
@@ -528,8 +538,8 @@
             }
           },
           {
-            thumb: le.a,
-            video: se.a,
+            thumb: se.a,
+            video: fe.a,
             ar: {
               title:
                 "\u0645\u062d\u0645\u062f \u0645\u062a\u0648\u0644\u064a \u0627\u0644\u0634\u0639\u0631\u0627\u0648\u064a",
@@ -543,67 +553,67 @@
             }
           }
         ];
-      function fe() {
+      function he() {
         var e = Object(o.a)([
           "\n  margin-top: 40px;\n  display: flex;\n  flex-direction: ",
           ";\n"
         ]);
         return (
-          (fe = function() {
+          (he = function() {
             return e;
           }),
           e
         );
       }
-      var de = l.b.div(fe(), function(e) {
+      var ve = l.b.div(he(), function(e) {
           return "LEFT_TO_RIGHT" === e.i18n.dir ? "row" : "row-reverse";
         }),
-        he = y(function(e) {
+        pe = y(function(e) {
           var n = e.i18n,
             t = Object(r.useState)(0),
             c = Object(R.a)(t, 2),
             i = c[0],
             o = c[1];
           return a.a.createElement(
-            de,
+            ve,
             { i18n: n },
-            a.a.createElement($, {
+            a.a.createElement(Q, {
               next: function() {
                 o(
-                  i < me.length - 1
+                  i < de.length - 1
                     ? function(e) {
                         return e + 1;
                       }
                     : 0
                 );
               },
-              item: me[i]
+              item: de[i]
             }),
-            a.a.createElement(Y, { list: me, active: i })
+            a.a.createElement(ee, { list: de, active: i })
           );
         });
-      function pe() {
+      function be() {
         var e = Object(o.a)([
           "\n  width: 100%;\n  min-height: 100vh;\n  height: 100%;\n  background: ",
           ";\n"
         ]);
         return (
-          (pe = function() {
+          (be = function() {
             return e;
           }),
           e
         );
       }
-      var ve = l.b.div(pe(), function(e) {
+      var ge = l.b.div(be(), function(e) {
           return e.theme.colors.background.ambient;
         }),
-        be = s(function(e) {
+        Ee = s(function(e) {
           var n = e.theme;
           return a.a.createElement(
-            ve,
+            ge,
             { theme: n },
             a.a.createElement(z, null),
-            a.a.createElement(he, null)
+            a.a.createElement(pe, null)
           );
         });
       Boolean(
@@ -613,9 +623,9 @@
             /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
           )
       );
-      var ge = t(8),
-        Ee = t(7),
-        xe = {
+      var xe = t(8),
+        ye = t(7),
+        je = {
           name: "DARK_THEME",
           colors: {
             primary: { normal: "#ff7700", ambient: "#0e0e0e", text: "#ffffff" },
@@ -627,7 +637,7 @@
           },
           fonts: {}
         },
-        ye = {
+        we = {
           name: "LIGHT_THEME",
           colors: {
             primary: { normal: "#ff7700", ambient: "#bc752f", text: "#ffffff" },
@@ -639,18 +649,18 @@
           },
           fonts: {}
         },
-        we = Object(ge.c)({
+        Te = Object(xe.c)({
           theme: function() {
             var e =
                 arguments.length > 0 && void 0 !== arguments[0]
                   ? arguments[0]
-                  : Object(Ee.a)({}, xe),
+                  : Object(ye.a)({}, je),
               n = arguments.length > 1 ? arguments[1] : void 0;
             switch (n.type) {
               case "DARK_THEME":
-                return Object(Ee.a)({}, xe);
+                return Object(ye.a)({}, je);
               case "LIGHT_THEME":
-                return Object(Ee.a)({}, ye);
+                return Object(ye.a)({}, we);
               default:
                 return e;
             }
@@ -659,22 +669,22 @@
             var e =
                 arguments.length > 0 && void 0 !== arguments[0]
                   ? arguments[0]
-                  : Object(Ee.a)({}, j),
+                  : Object(ye.a)({}, w),
               n = arguments.length > 1 ? arguments[1] : void 0;
             switch (n.type) {
               case "ENGLISH":
-                return Object(Ee.a)({}, j);
+                return Object(ye.a)({}, w);
               case "ARABIC":
-                return Object(Ee.a)({}, w);
+                return Object(ye.a)({}, j);
               default:
                 return e;
             }
           }
         }),
-        je = t(47),
-        Te = Object(ge.d)(we, Object(ge.a)(je.a));
+        Oe = t(47),
+        Ae = Object(xe.d)(Te, Object(xe.a)(Oe.a));
       i.a.render(
-        a.a.createElement(u.a, { store: Te }, a.a.createElement(be, null)),
+        a.a.createElement(u.a, { store: Ae }, a.a.createElement(Ee, null)),
         document.getElementById("root")
       ),
         "serviceWorker" in navigator &&
@@ -689,4 +699,4 @@
   },
   [[50, 1, 2]]
 ]);
-//# sourceMappingURL=main.c211118a.chunk.js.map
+//# sourceMappingURL=main.ef869e04.chunk.js.map
