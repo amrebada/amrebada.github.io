@@ -349,7 +349,7 @@
       }
       function D() {
         var e = Object(o.a)([
-          "\n  video {\n    height: 600px !important;\n    filter: blur(40px);\n    opacity: 0.4;\n  }\n"
+          "\n  video {\n    height: 600px !important;\n    filter: blur(40px);\n display: none;\n   opacity: 0.4;\n  }\n"
         ]);
         return (
           (D = function() {
