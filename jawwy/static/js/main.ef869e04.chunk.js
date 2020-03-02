@@ -594,7 +594,7 @@
         });
       function be() {
         var e = Object(o.a)([
-          "\n  width: 100%;\n  min-height: 100vh;\n  height: 100%;\n  background: ",
+          "\n  width: 100%;\n  min-height: 200vh;\n  height: 100%;\n  background: ",
           ";\n"
         ]);
         return (
